@@ -1,0 +1,75 @@
+# Read-only for every LLM agent. Edit thresholds here, not in code.
+seed: 0
+
+data_roots:
+  - /home/kiyaanpillai/Documents/epsilon-core/data
+  - /home/kiyaanpillai/Documents/aco-mkdb/data
+graph_logic_path: /home/kiyaanpillai/Documents/graph-logic
+konect_site: Networks.html
+
+# Largest full graph admitted as a held-out rung (simple edges).
+max_comfortable_edges: 3000000
+# Oracle model is not built above this |U|+|V|.
+oracle_vertex_cap: 250
+
+total_cpu_seconds: 3600
+per_evaluation_wall_seconds: 30
+max_parallel_workers: 1
+memory_cap_mb: 2048
+cpu_seconds_per_eval: 15
+
+llm_token_cap:
+  proposer: 100000
+  evolver: 100000
+llm_dollar_cap:
+  proposer: 10.0
+  evolver: 10.0
+
+# CP-SAT max_deterministic_time for the exact_status probe and for proving OPT.
+oracle_work_limit: 2.0
+# Cap for the one CP-SAT call that times the unreduced planted graph.
+# Planted W_r is lambda times the deterministic time that call reports.
+planted_proof_cap: 10.0
+# W_r on a proven cell is lambda times the deterministic time of the proof.
+lambda: 0.75
+lambda_grid: [0.05, 0.1, 0.2, 0.3, 0.5, 0.75, 1.0]
+
+# Stage-1 mean rho below this scores 0 and skips stage 2.
+rho_kill_threshold: 0.0
+# Identity-control gate, proven cells only, rho clipped to [0, 1].
+identity_rho_low: 0.2
+identity_rho_high: 0.9
+identity_nonzero_fraction: 0.5
+oracle_reducer_rho: 0.95
+too_easy_rho: 0.99
+
+# Promotion: top-K programs per (tier, gamma, theta). kappa: slope-test p-value.
+K: 3
+kappa: 0.05
+
+gamma:
+  - [1, 1]
+  - [9, 10]
+  - [8, 10]
+  - [7, 10]
+theta: [2, 3, 4, 5]
+
+dev_sizes: [40, 60, 80, 120, 160]
+dev_sources:
+  - key: konect-small/edit-zuwiktionary
+    family: wiktionary
+  - key: konect-small/edit-srwikiquote
+    family: wikiquote
+  - key: konect/matter
+    family: author-paper
+
+# MAP-Elites bins.
+rho_bins: [0.0, 0.5, 0.8, 0.9, 0.95, 1.01]
+alpha_bins: [0.0, 0.25, 0.5, 1.0, 2.0, 4.0, 1000.0]
+
+# Hypothesis numeric thresholds (referenced by the seed claims).
+hypotheses:
+  h1_rho: 0.95
+  h1_reduction: 0.5
+  h2_rho: 0.9
+  h5_alpha_factor: 4.0
