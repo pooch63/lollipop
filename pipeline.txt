@@ -1,0 +1,30 @@
+Hypothesis 1:
+
+First, evolve a reduction method. Then, evolve a heuristic.
+
+Hypothesis 2:
+
+Evolve a method that returns edge scores S and then two algorithms, one that evolves a reduction and then one that uses the edge scores for actual heuristic generation.
+
+Hypothesis 3:
+
+Pipeline for heuristic reduction:
+
+Plant a solution. Evolve algorithm for N iterations, or until it recovers the entire solution.
+
+Do this in parallel for each instance.
+
+Test each heuristic on the other planted instances. Which performs best on all of them? This score is the newly generated
+
+
+---
+
+# Prompts
+
+## Defining the problem
+
+Add 
+
+## Determining the test set
+
+You must determine which test set is best. You can use the GraphLogic.jl library to check which graphs are available. Go up the list of graphs,.

@@ -1,0 +1,62 @@
+{
+  "evolved_programs": 56,
+  "lint_rejected": 38,
+  "lint_rejection_rate": 0.6785714285714286,
+  "score_bins": {
+    "0": 41,
+    "[0.716, 1]": 8,
+    "[0.2, 0.5)": 4,
+    "[0.5, 0.716)": 3
+  },
+  "best_combined_score": 0.7653787195766194,
+  "core_mean_rho": 0.7154879875325673,
+  "best_minus_core": 0.049890732044052144,
+  "top": [
+    {
+      "hypothesis_id": "H2",
+      "program_hash": "2e6e78bd265219db",
+      "combined_score": 0.7653787195766194,
+      "alpha_hat": 3.0,
+      "class_violation": false
+    },
+    {
+      "hypothesis_id": "H2",
+      "program_hash": "8a7942362839ceeb",
+      "combined_score": 0.7653787195766194,
+      "alpha_hat": 3.0,
+      "class_violation": false
+    },
+    {
+      "hypothesis_id": "H1",
+      "program_hash": "b0a24234a8af0268",
+      "combined_score": 0.7653787195766194,
+      "alpha_hat": 1.0,
+      "class_violation": false
+    },
+    {
+      "hypothesis_id": "H2",
+      "program_hash": "cb092df95c2fd0b0",
+      "combined_score": 0.7653787195766194,
+      "alpha_hat": 1.0,
+      "class_violation": false
+    },
+    {
+      "hypothesis_id": "H2",
+      "program_hash": "ae54f52db57b51bd",
+      "combined_score": 0.7322033641263824,
+      "alpha_hat": 6.2792792792792795,
+      "class_violation": true
+    }
+  ],
+  "class_violations": [
+    "ae54f52db57b51bd"
+  ],
+  "seed_score": 0.7653787195766194,
+  "spend": {
+    "dollars": 0.21544424999999995,
+    "prompt_tokens": 558881,
+    "completion_tokens": 37862,
+    "calls": 80,
+    "model": "gpt-5-mini"
+  }
+}

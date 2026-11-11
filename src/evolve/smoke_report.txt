@@ -1,0 +1,225 @@
+scoring matched controls for 81 programs
+controls 1/81 536d24d0ca4b9ced
+controls 2/81 536d24d0ca4b9ced
+controls 3/81 b0a24234a8af0268
+controls 4/81 cb092df95c2fd0b0
+controls 5/81 cb092df95c2fd0b0
+controls 6/81 cb092df95c2fd0b0
+controls 7/81 cb092df95c2fd0b0
+controls 8/81 cb092df95c2fd0b0
+controls 9/81 cb092df95c2fd0b0
+controls 10/81 2e6e78bd265219db
+controls 11/81 2e6e78bd265219db
+controls 12/81 2e6e78bd265219db
+controls 13/81 2e6e78bd265219db
+controls 14/81 2e6e78bd265219db
+controls 15/81 8a7942362839ceeb
+controls 16/81 ae54f52db57b51bd
+controls 17/81 2ffadfe6bb51f49c
+controls 18/81 2ffadfe6bb51f49c
+controls 19/81 2ffadfe6bb51f49c
+controls 20/81 2ffadfe6bb51f49c
+controls 21/81 90e6a28d3e40c646
+controls 22/81 8384303f5fa90d96
+controls 23/81 edf97520b443bb96
+controls 24/81 edf97520b443bb96
+controls 25/81 92d40866705a6f8a
+controls 26/81 5a5b30ae387ba060
+controls 27/81 c7135bde8d9968e0
+controls 28/81 ef4a4d445ef55d1e
+controls 29/81 cf46583e61fdd97b
+controls 30/81 0dd041fe8b109af7
+controls 31/81 0e3e219a834c7d10
+controls 32/81 10088e08b5284943
+controls 33/81 1825b44774e0f42a
+controls 34/81 23b2d39540c4995d
+controls 35/81 29e8d1e99d1751f7
+controls 36/81 2a3950012e993c98
+controls 37/81 3248ebb369b02d4b
+controls 38/81 337368eaa86aaa6d
+controls 39/81 3c7c1940e823e15f
+controls 40/81 4242b43cf3335dee
+controls 41/81 46d245452261a8e4
+controls 42/81 4f2d692044ad858e
+controls 43/81 5098ab723bb329ec
+controls 44/81 64907dccc9651f32
+controls 45/81 686708b87c410f85
+controls 46/81 6dc08f93c9257d54
+controls 47/81 78c0c38633b86ef4
+controls 48/81 7bec068c4d226844
+controls 49/81 7d4d5d1192c79b13
+controls 50/81 844699e04e5b65b2
+controls 51/81 8a7942362839ceeb
+controls 52/81 8a7942362839ceeb
+controls 53/81 8a7942362839ceeb
+controls 54/81 8a7942362839ceeb
+controls 55/81 8a7942362839ceeb
+controls 56/81 8a7942362839ceeb
+controls 57/81 8a7942362839ceeb
+controls 58/81 8a7942362839ceeb
+controls 59/81 8a7942362839ceeb
+controls 60/81 8a7942362839ceeb
+controls 61/81 8a7942362839ceeb
+controls 62/81 9a4fbb2cef447f17
+controls 63/81 9d99e7d6f3e2c3c4
+controls 64/81 a16a853e59c91d59
+controls 65/81 a1ef52054ad586d7
+controls 66/81 b0347ca19b158c7d
+controls 67/81 ba06e232ad7a8adf
+controls 68/81 bba1fbab78563dc5
+controls 69/81 cfc6989579167bde
+controls 70/81 d97e4ebeed09fd86
+controls 71/81 dace3699d4447a59
+controls 72/81 dd79b617492d835d
+controls 73/81 eaa30b5eac0ae9c5
+controls 74/81 eb234306b8c797bb
+controls 75/81 f7d33f691101f899
+controls 76/81 f8ad8d3f44bc895e
+controls 77/81 fd7b45a8f128b866
+controls 78/81 fe09cdf07bd90be3
+controls 79/81 fefb35e1b453cdcb
+controls 80/81 fa46f8ab3594ac76
+controls 81/81 18f598b51221f56f
+
+== identity and baseline controls
+  lambda   identity       core     oracle    nonzero pass
+    0.05     0.0481     0.1249     0.9770      0.086 no
+    0.10     0.0936     0.1948     0.9943      0.138 no
+    0.20     0.1415     0.2489     1.0000      0.172 no
+    0.30     0.1616     0.3011     1.0000      0.195 no
+    0.50     0.1921     0.4117     1.0000      0.230 no
+    0.75     0.3333     0.7155     1.0000      0.563 yes
+    1.00     0.9397     0.9893     1.0000      0.943 no
+passed: True (chosen lambda minimizes |mean_rho(identity) - 0.5|)
+chosen lambda: 0.75
+planted raw rho > 1: 25/37 (0.676) at lambda 0.75
+
+== best-rho program and Pareto front
+[L]
+  best rho=0.7654 alpha=1.0000 hash=536d24d0ca4b9ced hypothesis=H1 run=smoke-L-H1
+  pseudocode:
+    1: _1 = ceil(((p * theta) / q))
+    2: _2 = ceil(((p * theta) / q))
+    3: _3 = peel(_1, _2)
+    4: keep = _3
+    5: return keep
+  Pareto front (59):
+    rho=0.7654 alpha=1.0000 hash=536d24d0ca4b9ced
+    rho=0.7654 alpha=1.0000 hash=536d24d0ca4b9ced
+    rho=0.7654 alpha=1.0000 hash=b0a24234a8af0268
+    rho=0.7654 alpha=1.0000 hash=cb092df95c2fd0b0
+    rho=0.7654 alpha=1.0000 hash=cb092df95c2fd0b0
+    rho=0.7654 alpha=1.0000 hash=cb092df95c2fd0b0
+    rho=0.7654 alpha=1.0000 hash=cb092df95c2fd0b0
+    rho=0.7654 alpha=1.0000 hash=cb092df95c2fd0b0
+    rho=0.7654 alpha=1.0000 hash=cb092df95c2fd0b0
+    rho=0.0000 alpha=0.0000 hash=0dd041fe8b109af7
+    rho=0.0000 alpha=0.0000 hash=0e3e219a834c7d10
+    rho=0.0000 alpha=0.0000 hash=10088e08b5284943
+    rho=0.0000 alpha=0.0000 hash=1825b44774e0f42a
+    rho=0.0000 alpha=0.0000 hash=23b2d39540c4995d
+    rho=0.0000 alpha=0.0000 hash=29e8d1e99d1751f7
+    rho=0.0000 alpha=0.0000 hash=2a3950012e993c98
+    rho=0.0000 alpha=0.0000 hash=3248ebb369b02d4b
+    rho=0.0000 alpha=0.0000 hash=337368eaa86aaa6d
+    rho=0.0000 alpha=0.0000 hash=3c7c1940e823e15f
+    rho=0.0000 alpha=0.0000 hash=4242b43cf3335dee
+    rho=0.0000 alpha=0.0000 hash=46d245452261a8e4
+    rho=0.0000 alpha=0.0000 hash=4f2d692044ad858e
+    rho=0.0000 alpha=0.0000 hash=5098ab723bb329ec
+    rho=0.0000 alpha=0.0000 hash=64907dccc9651f32
+    rho=0.0000 alpha=0.0000 hash=686708b87c410f85
+    rho=0.0000 alpha=0.0000 hash=6dc08f93c9257d54
+    rho=0.0000 alpha=0.0000 hash=78c0c38633b86ef4
+    rho=0.0000 alpha=0.0000 hash=7bec068c4d226844
+    rho=0.0000 alpha=0.0000 hash=7d4d5d1192c79b13
+    rho=0.0000 alpha=0.0000 hash=844699e04e5b65b2
+    rho=0.0000 alpha=0.0000 hash=8a7942362839ceeb
+    rho=0.0000 alpha=0.0000 hash=8a7942362839ceeb
+    rho=0.0000 alpha=0.0000 hash=8a7942362839ceeb
+    rho=0.0000 alpha=0.0000 hash=8a7942362839ceeb
+    rho=0.0000 alpha=0.0000 hash=8a7942362839ceeb
+    rho=0.0000 alpha=0.0000 hash=8a7942362839ceeb
+    rho=0.0000 alpha=0.0000 hash=8a7942362839ceeb
+    rho=0.0000 alpha=0.0000 hash=8a7942362839ceeb
+    rho=0.0000 alpha=0.0000 hash=8a7942362839ceeb
+    rho=0.0000 alpha=0.0000 hash=8a7942362839ceeb
+    rho=0.0000 alpha=0.0000 hash=8a7942362839ceeb
+    rho=0.0000 alpha=0.0000 hash=9a4fbb2cef447f17
+    rho=0.0000 alpha=0.0000 hash=9d99e7d6f3e2c3c4
+    rho=0.0000 alpha=0.0000 hash=a16a853e59c91d59
+    rho=0.0000 alpha=0.0000 hash=a1ef52054ad586d7
+    rho=0.0000 alpha=0.0000 hash=b0347ca19b158c7d
+    rho=0.0000 alpha=0.0000 hash=ba06e232ad7a8adf
+    rho=0.0000 alpha=0.0000 hash=bba1fbab78563dc5
+    rho=0.0000 alpha=0.0000 hash=cfc6989579167bde
+    rho=0.0000 alpha=0.0000 hash=d97e4ebeed09fd86
+    rho=0.0000 alpha=0.0000 hash=dace3699d4447a59
+    rho=0.0000 alpha=0.0000 hash=dd79b617492d835d
+    rho=0.0000 alpha=0.0000 hash=eaa30b5eac0ae9c5
+    rho=0.0000 alpha=0.0000 hash=eb234306b8c797bb
+    rho=0.0000 alpha=0.0000 hash=f7d33f691101f899
+    rho=0.0000 alpha=0.0000 hash=f8ad8d3f44bc895e
+    rho=0.0000 alpha=0.0000 hash=fd7b45a8f128b866
+    rho=0.0000 alpha=0.0000 hash=fe09cdf07bd90be3
+    rho=0.0000 alpha=0.0000 hash=fefb35e1b453cdcb
+[N]
+  no archived program
+[Q]
+  no archived program
+
+== rho and alpha by tier
+L: best rho=0.7654 alpha_hat=1.0000
+N: no run
+Q: no run
+
+== matched reduction controls
+H1: n=41 program=0.0605 random=0.0540 degree=0.0583
+H2: n=40 program=0.4463 random=0.3973 degree=0.4321
+best 536d24d0ca4b9ced (H1): program=0.7654 random=0.6471 degree=0.7405 over 211 cells
+
+== hypotheses
+H1 [L] untested: Vertices with low (deg + nbr_sum(deg)) can be dropped above the safe core threshold at rho >= 0.95 with reduction <= 0.5.
+H2 [L] untested: Minhash bucket collisions identify near-twin vertices; keeping one representative per bucket preserves rho >= 0.9.
+H3 [N] untested: Ranking vertices by degree and keeping the top fraction beats the baseline core on rho at equal reduction.
+H4 [Q] untested: Jaccard overlap with the highest-degree vertices outperforms degree-only scoring on rho at the same reduction.
+H5 [Q] untested: A two-hop count score dominates every L-tier program on the Pareto front at alpha_hat within 4.0x of the best L program.
+
+== Kendall tau across held-out rungs
+Promotion has not been run.
+
+== planted instances marked too easy
+dev-author-paper-n160|1/1|5: too_easy
+dev-author-paper-n160|9/10|5: too_easy
+dev-author-paper-n40|1/1|4: unplantable
+dev-author-paper-n40|1/1|5: unplantable
+dev-author-paper-n40|7/10|4: unplantable
+dev-author-paper-n40|7/10|5: unplantable
+dev-author-paper-n40|8/10|4: unplantable
+dev-author-paper-n40|8/10|5: unplantable
+dev-author-paper-n40|9/10|4: unplantable
+dev-author-paper-n40|9/10|5: unplantable
+dev-author-paper-n60|1/1|4: unplantable
+dev-author-paper-n60|1/1|5: unplantable
+dev-author-paper-n60|7/10|5: unplantable
+dev-author-paper-n60|8/10|4: unplantable
+dev-author-paper-n60|8/10|5: unplantable
+dev-author-paper-n60|9/10|4: unplantable
+dev-author-paper-n60|9/10|5: unplantable
+dev-author-paper-n80|1/1|5: unplantable
+dev-author-paper-n80|7/10|5: unplantable
+dev-author-paper-n80|8/10|5: unplantable
+dev-author-paper-n80|9/10|5: unplantable
+dev-wikiquote-n120|7/10|2: too_easy
+dev-wikiquote-n120|7/10|3: too_easy
+dev-wikiquote-n120|8/10|2: too_easy
+dev-wikiquote-n160|7/10|2: too_easy
+dev-wiktionary-n40|1/1|5: unplantable
+dev-wiktionary-n40|9/10|5: unplantable
+dev-wiktionary-n60|1/1|5: unplantable
+dev-wiktionary-n60|9/10|5: unplantable
+
+== budget spent by role
+evolver: 3585.063s committed
+evolver: 31 refused reservations
+

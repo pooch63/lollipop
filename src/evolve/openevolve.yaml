@@ -1,0 +1,44 @@
+# OpenEvolve 0.4.1 schema, verified against the installed package.
+# The smoke test loads this file and injects a mock client. A real run would
+# put the API key in the environment, never in this file.
+# MAP-Elites feature_dimensions are the raw metric names. OpenEvolve bins them.
+max_iterations: 3
+checkpoint_interval: 1
+diff_based_evolution: false
+full_rewrite_probability: 0.0
+random_seed: 0
+language: python
+log_level: INFO
+early_stopping_patience: null
+llm:
+  temperature: 0.0
+  max_tokens: 2000
+  models:
+    - name: mock
+      weight: 1.0
+      temperature: 0.0
+      max_tokens: 2000
+  evaluator_models: []
+prompt:
+  system_message: "Hypothesis seed. The smoke test replaces this text with the claim."
+database:
+  num_islands: 1
+  population_size: 20
+  archive_size: 20
+  feature_dimensions:
+    - rho
+    - alpha_hat
+  feature_bins:
+    rho: 5
+    alpha_hat: 6
+  island_initial_programs: []
+  migration_interval: 1000
+  random_seed: 0
+evaluator:
+  timeout: 1800
+  max_retries: 0
+  cascade_evaluation: true
+  cascade_thresholds:
+    - 0.5
+  parallel_evaluations: 1
+  use_llm_feedback: false

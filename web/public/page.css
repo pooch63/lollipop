@@ -1,0 +1,303 @@
+/* Page rules for the collage hero, the app frame and the step panels.
+   Deal: hero collage, brand rose from the lollipop logo, type funnel, radius sharp,
+   nav-mega, footer-statement, close-type, rhythm dark-band, buttons pill.
+   Effect grain-gradient in the hero frame. Moment liquid-type on #limit.
+   Grounds: hero bg-dots, #questions bg-mist, #method ground-inverse. */
+
+.nav__logo img,
+.footer__mark img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex: none;
+}
+
+.hero__art {
+  isolation: isolate;
+}
+
+.hero__art > .ly-piece--main {
+  bottom: -40px;
+}
+
+.hero__art > .ly-piece--note {
+  left: 32px;
+  bottom: 32px;
+  width: 300px;
+  z-index: 2;
+}
+
+.hero .ui-win__cols,
+.hero .ui-win__row {
+  grid-template-columns: 24px minmax(0, 0.7fr) minmax(0, 1.3fr) auto;
+  padding-right: var(--ly-cut-room);
+}
+
+.hero .ui-win {
+  min-height: 100%;
+  background: #fff;
+  color: #1a1216;
+}
+
+.note-card {
+  background: #fff;
+  color: #1a1216;
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 7%), 0 18px 44px -20px rgb(0 0 0 / 45%);
+}
+
+.note-card header,
+.note-card li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.note-card header {
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.note-card ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.note-card li {
+  padding: 7px 0;
+  border-top: 1px solid rgb(0 0 0 / 8%);
+  font-size: 13px;
+}
+
+.note-card .chip {
+  display: inline-flex;
+  align-items: center;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: 99px;
+  background: #fde7f1;
+  color: #8e1248;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.app.ui {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  margin-top: var(--s-7);
+  background: var(--u-bg, #fff);
+  border: 1px solid var(--u-border, var(--line));
+  border-radius: var(--u-r, var(--r-md));
+  box-shadow: var(--u-shadow, none);
+  min-height: 0;
+}
+
+.app > .app__pane {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.app > .app__pane + .app__pane {
+  border-left: 1px solid var(--u-line, var(--line));
+}
+
+.app > .app__pane > .ui-panel {
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.app > .app__pane::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 64px;
+  background: linear-gradient(transparent, var(--u-bg, #fff));
+  pointer-events: none;
+}
+
+.peel {
+  position: relative;
+  min-height: 760px;
+  background: #fff;
+  color: #1a1216;
+}
+
+.peel__bar,
+.peel__log {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
+  font-size: 13px;
+}
+
+.peel__bar {
+  border-bottom: 1px solid rgb(0 0 0 / 8%);
+  color: #5c5458;
+}
+
+.peel svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.peel line {
+  stroke: #1a1216;
+  stroke-opacity: 0.18;
+  stroke-width: 1.4;
+}
+
+.peel .peel__edge--on {
+  stroke: #c2186a;
+  stroke-opacity: 1;
+  stroke-width: 2.2;
+}
+
+.peel .peel__edge--off {
+  stroke-opacity: 0.05;
+}
+
+.peel circle {
+  fill: #1a1216;
+  stroke: #fff;
+  stroke-width: 3;
+}
+
+.peel .is-on circle {
+  fill: #c2186a;
+}
+
+.peel .is-off {
+  opacity: 0.28;
+}
+
+.peel text {
+  fill: #5c5458;
+  font-size: 12px;
+  font-family: var(--font-mono), ui-monospace, monospace;
+}
+
+.peel__log {
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0;
+  padding-top: 0;
+  list-style: none;
+}
+
+.peel__log li {
+  padding: 8px 0;
+  border-top: 1px solid rgb(0 0 0 / 8%);
+  color: #8a8084;
+  font-family: var(--font-mono), ui-monospace, monospace;
+}
+
+.peel__log li.is-on {
+  color: #1a1216;
+}
+
+.peel > .loop-pause {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 3;
+}
+
+#method .panel {
+  --p-h: 248px;
+}
+
+#method .stage > .at-rise {
+  --ax: 16px;
+  --ay: 20px;
+  --fit-max: 300px;
+}
+
+#limit .rows {
+  max-width: 640px;
+  margin-top: var(--s-6);
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .app.ui {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  #method {
+    --h: 2;
+  }
+}
+
+@media (max-width: 1023px) {
+  .app.ui {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
+  }
+
+  .app > .app__pane--list {
+    max-height: 252px;
+  }
+
+  .app > .app__pane--list::after {
+    display: none;
+  }
+
+  .app .ui-win__side {
+    display: none;
+  }
+
+  .app .ui-win__body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .app > .app__pane + .app__pane {
+    border-left: 0;
+    border-top: 1px solid var(--u-line, var(--line));
+  }
+
+  .hero__art > .ly-piece--note {
+    left: var(--s-4);
+    bottom: var(--s-4);
+    width: 260px;
+  }
+}
+
+@media (max-width: 639px) {
+  #method .panel {
+    --p-h: 180px;
+  }
+
+  #method {
+    --hm: 2;
+  }
+
+  #questions {
+    --hm: 2;
+  }
+
+  .app.ui {
+    grid-template-rows: minmax(0, 1fr);
+  }
+
+  .app > .app__pane--list {
+    display: none;
+  }
+
+  .app > .app__pane + .app__pane {
+    border-top: 0;
+  }
+
+  .peel {
+    min-height: 640px;
+  }
+}
